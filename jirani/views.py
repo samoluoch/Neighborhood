@@ -38,15 +38,15 @@ def register(request):
 
 def profile(request,username):
     profile = User.objects.get(username=username)
-    try:
-        profile_details = Profile.get_by_id(profile.id)
-    except:
-        profile_details = Profile.filter_by_id(profile.id)
-    projects = Project.get_profile_projects(profile.id)
+    # try:
+    #     profile_details = Profile.get_by_id(profile.id)
+    # except:
+    #     profile_details = Profile.filter_by_id(profile.id)
+    # projects = Project.get_profile_projects(profile.id)
     title = f'@{profile.username} Projects'
 
 
-    return render(request, 'profile/profile.html', {'title':title, 'profile':profile, 'profile_details':profile_details, 'projects':projects})
+    return render(request, 'profile/profile.html', {'title':title, 'profile':profile})
 
 
 
