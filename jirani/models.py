@@ -36,7 +36,14 @@ class Profile(models.Model):
         profile = Profile.objects.filter(user=id).first()
         return profile
 
+class Category(models.Model):
+    '''
+    This is the cetegories class
+    '''
+    name = models.CharField(max_length =30)
 
+    def __str__(self):
+        return self.name
 
 
 class Post(models.Model):
