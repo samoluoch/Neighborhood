@@ -1,8 +1,73 @@
 {%extends 'base.html'%}
-
+{% load bootstrap3 %}
 {% block content %}
 
+<style>
+.blue-button{
+    width: 100px;
+    -webkit-transition: background-color 1s , color 1s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 1s , color 1s;
+    min-height: 20px;
+    background-color: #002E5B;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0px 20px 15px 20px;
+    padding: 5px 0px;
+    display: inline-block;
+}
+.blue-button:hover{
+    background-color: #dadada;
+    color: #002E5B;
+}</style>
+<h2 id="home-header" style="text-align:center; color: black; background-color: #F7F7F7;">Project Reviews</h2>
 
-<h2>Hellow Jirani</h2>
 
-{%endblock%}
+
+{% for post in posts %}
+<div class="container-fluid" style="background-color: #F7F7F7;">
+    <div class="row" height="1000px">
+        <br><br>
+        <div class="col-xs-9 col-sm- col-md-8 col-lg-8" style="text-align:center;"><h3>{{project.title}}</h3>
+
+            <h5 style="color: black;" ><b><i>{{image.profile}}</i></b></h5>
+            <button type="button" data-toggle="modal" data-target="#myModal{{project.id}}">
+
+            <img class="well" src="{{project.image.url}}"  width='500' height='500' alt="" class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="backgrounds-color: white;">
+                </button>
+
+
+            <h4 style="color: black;">Project Summary</h4>
+
+            <h5><b style="color: green;">Title:</b> {{project.title}}</h5>
+            <h5><b style="color: green;">Posted By:</b> {{project.profile}}</h5>
+            <h5><b style="color: green;">Description:</b> {{project.description}}</h5>
+            <h5><b style="color: green;">Submitted:</b> {{project.pub_date|timesince}} ago</h5>
+            <h5><b style="color: green;">URL:</b> {{project.url}}</h5>
+
+
+            <h4 style="color: black;">Project Ratings</h4>
+            <h5>{{ project.rating.count }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>
+            <!--<h6 style="color: green;">Comments:</h6> {% for review in project.designrating_set.all %}-->
+                <!--<ul>{{review.comment}}</ul>-->
+                <!--{% endfor %}-->
+            <h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>
+
+            <h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>
+                     <br><br>
+            <a href="{{project.url}}" class="blue-button">Visit site</a>
+
+ </div>
+<!--Rating-->
+
+
+
+
+
+        <!--End Rating-->
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

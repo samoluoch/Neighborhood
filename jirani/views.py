@@ -4,13 +4,13 @@ from django.http import HttpResponse,Http404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm,EditProfileForm,PostForm
-from .models import Profile
+from .models import Profile,Post
 
 # Create your views here.
 
 def home(request):
-    # images = Image.objects.all()
-    return render(request,'home.html')
+    posts = Post.objects.all()
+    return render(request,'home.html', {"posts":posts})
 
 
 
