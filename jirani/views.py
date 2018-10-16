@@ -3,7 +3,7 @@ from django.http import HttpResponse,Http404
 # from .models import Image,Profile,Comments
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-
+from .forms import RegistrationForm
 # Create your views here.
 
 def home(request):
