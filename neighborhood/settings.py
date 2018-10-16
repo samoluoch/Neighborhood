@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jirani.apps.JiraniConfig',
+    'bootstrap3',
 
 ]
 
