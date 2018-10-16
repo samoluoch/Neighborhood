@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('jirani.urls')),
     url(r'^', include('registration.backends.simple.urls')),
+    url(r'^logout/$', views.logout, {"next_page": '/'}),
 
 ]
