@@ -85,6 +85,11 @@ class Post(models.Model):
     #     return image
 
     @classmethod
+    def get_profile_posts(cls, profile):
+        posts = Post.objects.filter(profile__id=profile)
+        return posts
+
+    @classmethod
     def search_by_category(cls, search_term):
         # cat = category.objects.get(name=search_term)
         posts = cls.objects.filter(category__name__icontains=search_term)
