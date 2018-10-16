@@ -3,7 +3,7 @@ from django.http import HttpResponse,Http404
 # from .models import Image,Profile,Comments
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm
+from .forms import RegistrationForm,EditProfileForm
 from .models import Profile
 
 # Create your views here.
