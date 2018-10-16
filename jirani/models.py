@@ -46,6 +46,17 @@ class Category(models.Model):
         return self.name
 
 
+
+class Location(models.Model):
+    '''
+    This is the location class
+    '''
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     '''
     This is image class model
