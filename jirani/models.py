@@ -3,10 +3,21 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
+class Location(models.Model):
+    '''
+    This is the location class
+    '''
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
+
 class Profile(models.Model):
     photo = models.ImageField(upload_to='image/', null=True)
     bio = models.TextField()
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, default=1)
+    location = models.ForeignKey(Location, null=True)
+
 
 
     def __str__(self):
@@ -47,15 +58,6 @@ class Category(models.Model):
 
 
 
-class Location(models.Model):
-    '''
-    This is the location class
-    '''
-    name = models.CharField(max_length =30)
-
-    def __str__(self):
-        return self.name
-
 
 class Post(models.Model):
     '''
@@ -67,6 +69,8 @@ class Post(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category)
     location = models.ForeignKey(Location, null=True)
+    profile = models.ForeignKey(User, null=True)
+
 
     def save_post(self):
         self.save()
