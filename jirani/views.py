@@ -3,7 +3,7 @@ from django.http import HttpResponse,Http404
 # from .models import Image,Profile,Comments
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm,EditProfileForm
+from .forms import RegistrationForm,EditProfileForm,PostForm
 from .models import Profile
 
 # Create your views here.
@@ -62,6 +62,32 @@ def edit_profile(request):
         form = EditProfileForm()
 
     return render(request, 'profile/edit_profile.html', {'form':form})
+
+
+
+def upload_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            upload = form.save(commit=False)
+            upload.profile = request.user
+            upload.save()
+            return redirect('profile',username=request.user)
+    else:
+        form = PostForm()
+
+    return render(request, 'profile/upload_post.html', {'form': form})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
