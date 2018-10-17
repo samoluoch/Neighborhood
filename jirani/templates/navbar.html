@@ -71,7 +71,9 @@
                     <a href="{%url 'home' request.user.profile.location.id %}">Home</a>
                   </li>
                     <li>
-                    <a href="/user/samsoluoch">Profile Details</a>
+                    <a href="/user/{{request.user.username}}">Profile Details</a>
+
+
                   </li>
                     <li class="list-inline-item">
                             <a href="{% url 'edit_profile' %}">Edit Profile</a>
@@ -96,6 +98,7 @@
           </div>
     <div class="upload_project">
     <a href="/post/" class="btn btn-primary">Submit Post</a>
+
 </div>
 </nav>
 

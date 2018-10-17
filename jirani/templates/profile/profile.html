@@ -67,36 +67,36 @@
     <div class="row">
         <h3 style="color: black;">My Projects List</h3>
         {% for post in posts %}
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-            <br><br>
+        <!--<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">-->
+            <!--<br><br>-->
 
-            <h3 style="color: green;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">{{project.title}}</h3>
-<button type="button" data-toggle="modal" data-target="#myModal{{project.id}}">
+            <!--<h3 style="color: green;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">{{project.title}}</h3>-->
+<!--<button type="button" data-toggle="modal" data-target="#myModal{{project.id}}">-->
 
-            <img class="well" src="{{post.image.url}}"  width='500' height='500' alt="" class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="backgrounds-color: white;">
-                </button>
+            <!--<img class="well" src="{{post.image.url}}"  width='500' height='500' alt="" class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="backgrounds-color: white;">-->
+                <!--</button>-->
 
-                        <h4 style="color: black;">Post Summary</h4>
+                        <!--<h4 style="color: black;">Post Summary</h4>-->
 
-            <h5><b>Name:</b> {{post.name}}</h5>
-            <h5>{{post.pub_date|timesince}} ago</h5>
-            <h5><b>Description:</b> {{post.description}}</h5>
-            <h5><b>Location:</b> {{post.location}}</h5>
-            <h5><b>Category:</b> {{post.category}}</h5>
-
-
-
-            <h4 style="color: black;">Project Ratings</h4>
-
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>
-
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>
-            <hr>
-                        <a href="{{project.url}}" class="blue-button">Visit site</a>
+            <!--<h5><b>Name:</b> {{post.name}}</h5>-->
+            <!--<h5>{{post.pub_date|timesince}} ago</h5>-->
+            <!--<h5><b>Description:</b> {{post.description}}</h5>-->
+            <!--<h5><b>Location:</b> {{post.location}}</h5>-->
+            <!--<h5><b>Category:</b> {{post.category}}</h5>-->
 
 
-        </div>
+
+            <!--<h4 style="color: black;">Project Ratings</h4>-->
+
+            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>-->
+            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>-->
+
+            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>-->
+            <!--<hr>-->
+                        <!--<a href="{{project.url}}" class="blue-button">Visit site</a>-->
+
+
+        <!--</div>-->
         {% empty %}
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <h5>You have submitted 0 projects so far. Please submit projects</h5>
@@ -122,39 +122,39 @@
 
 {% for project in projects %}
 <!-- modal content -->
-<div class="modal fade" id="myModal{{project.id}}" role="dialog">
-   <div class="modal-dialog">
+<!--<div class="modal fade" id="myModal{{project.id}}" role="dialog">-->
+   <!--<div class="modal-dialog">-->
 
-       <div class="modal-content">
-           <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-
-           </div>
-
-           <div class="modal-body">
-                              <img src="{{project.image.url }}" alt="" width="500" height="500">
-
-           </div>
+       <!--<div class="modal-content">-->
+           <!--<div class="modal-header">-->
+               <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
 
 
-           <div class="modal-footer">
-               <h3>Project Details</h3>
-               <h5 style="color: green;">{{project.pub_date|timesince}} ago</h5>
-                <h5 style="color: green;"><b>Caption:</b> {{project.description}}</h5>
+           <!--</div>-->
 
-               <h5>{{ project.rating.count }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>
+           <!--<div class="modal-body">-->
+                              <!--<img src="{{project.image.url }}" alt="" width="500" height="500">-->
 
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>
-            <hr>
-                        <a href="{{project.url}}" class="blue-button">Visit site</a>
+           <!--</div>-->
 
 
-           </div>
-       </div>
-   </div>
-</div>
+           <!--<div class="modal-footer">-->
+               <!--<h3>Project Details</h3>-->
+               <!--<h5 style="color: green;">{{project.pub_date|timesince}} ago</h5>-->
+                <!--<h5 style="color: green;"><b>Caption:</b> {{project.description}}</h5>-->
+
+               <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>-->
+            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>-->
+
+            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>-->
+            <!--<hr>-->
+                        <!--<a href="{{project.url}}" class="blue-button">Visit site</a>-->
+
+
+           <!--</div>-->
+       <!--</div>-->
+   <!--</div>-->
+<!--</div>-->
 {% endfor %}
 
 
