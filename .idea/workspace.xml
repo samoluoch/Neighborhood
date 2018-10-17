@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0f8be9a8-0935-465e-964d-c7c92eb13aef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jirani/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jirani/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jirani/templates/business.html" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/templates/business.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jirani/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jirani/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,15 +39,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="8" />
-          <entry key="html" value="331" />
-          <entry key="py" value="927" />
+          <entry key="html" value="368" />
+          <entry key="py" value="928" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="331" />
+          <entry key="HTML" value="368" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="927" />
+          <entry key="Python" value="928" />
         </counts>
       </usages-collector>
     </session>
@@ -60,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jirani/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="128" column="16" lean-forward="true" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+            <state relative-caret-position="343">
+              <caret line="116" column="16" lean-forward="true" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -105,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jirani/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="490">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
@@ -118,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/jirani/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -129,8 +126,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jirani/templates/business.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="324">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -138,6 +135,7 @@
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#h5#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -220,6 +218,7 @@
       <find>length</find>
       <find>pro</find>
       <find>s</find>
+      <find>post</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,14 +247,14 @@
         <option value="$PROJECT_DIR$/jirani/templates/navbar.html" />
         <option value="$PROJECT_DIR$/jirani/models.py" />
         <option value="$PROJECT_DIR$/jirani/admin.py" />
+        <option value="$PROJECT_DIR$/jirani/urls.py" />
         <option value="$PROJECT_DIR$/jirani/views.py" />
         <option value="$PROJECT_DIR$/jirani/templates/business.html" />
-        <option value="$PROJECT_DIR$/jirani/urls.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="742" />
+    <option name="x" value="589" />
     <option name="y" value="23" />
     <option name="width" value="698" />
     <option name="height" value="815" />
@@ -331,7 +330,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="742" y="23" width="698" height="815" extended-state="0" />
+    <frame x="589" y="23" width="698" height="815" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -518,22 +517,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jirani/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="128" column="16" lean-forward="true" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jirani/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="116" column="16" lean-forward="true" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jirani/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -558,30 +577,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jirani/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jirani/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jirani/templates/business.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state relative-caret-position="324">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -589,6 +588,7 @@
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#h5#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#h5#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#h5#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
