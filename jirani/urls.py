@@ -10,14 +10,13 @@ from django.conf.urls.static import static
 
 
 urlpatterns=[
-    # url(r'^$', views.home, name='home'),
+    url(r'^$', views.index, name='index'),
     url(r'^search/$', views.search_profile, name='search_project'),
     url(r'^signup/', views.register, name='signup'),
     url(r'^edit/', views.edit_profile, name='edit_profile'),
     url(r'^user/(?P<username>\w+)', views.profile, name='profile'),
     url(r'^post/$', views.upload_post, name='upload_post'),
-    url(r'^(\d+)', views.home, name='home'),
+    url(r'^home/(\d+)', views.home, name='home'),
     url(r'^business/(\d+)', views.business, name='business'),
-    # url(r'^business/', views.business, name='business'),
 
 ]

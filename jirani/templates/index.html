@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+
+<h1>Karibu Jirani</h1>
+
+<div class="row">
+
+<div class="col-xs-3 col-sm- col-md-4 col-lg-4" style="text-align:center;">
+
+            <a href="{%url 'home' request.user.profile.location.id %}" class="btn btn-primary">Latest Neighborhood Updates</a>
+
+
+        <a href="/business/{{request.user.profile.location.id}}" class="btn btn-primary">Businesses Around Me</a>
+
+
+        </div>
+    <br><br>
+</div>
+
+{% endblock %}

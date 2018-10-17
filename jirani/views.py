@@ -8,9 +8,10 @@ from .models import Profile,Post,Location,Business
 
 # Create your views here.
 
-# def home(request):
-#     posts = Post.objects.all()
-#     return render(request,'home.html', {"posts":posts})
+def index(request):
+    # posts = Post.objects.all()
+
+    return render(request,'index.html')
 
 
 def home(request,location_id):
