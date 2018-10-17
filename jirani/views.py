@@ -4,13 +4,28 @@ from django.http import HttpResponse,Http404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm,EditProfileForm,PostForm
-from .models import Profile,Post
+from .models import Profile,Post,Location
 
 # Create your views here.
 
-def home(request):
-    posts = Post.objects.all()
-    return render(request,'home.html', {"posts":posts})
+# def home(request):
+#     posts = Post.objects.all()
+#     return render(request,'home.html', {"posts":posts})
+
+
+def home(request,location_id):
+    location = Location.objects.get(id=location_id)
+    print(location)
+    print('resertttttsttststststststssttstst')
+
+
+    try:
+        location_details=Post.objects.filter(location=location)
+    except:
+        location_details = Location.filter(location.id)
+    posts = Post.get_location_posts(location.id)
+
+    return render(request, 'home.html', {"posts": posts, "location_details":location_details, "location":location})
 
 
 
@@ -104,3 +119,14 @@ def search_profile(request):
     else:
         message = 'Type profile'
         return render(request, 'search.html', {'message':message})
+
+    # def home(request, location):
+    #     location = Location.objects.get(name=location)
+    #     try:
+    #         location_details = Post.objects.filter(location=location)
+    #     except:
+    #         location_details = Location.filter_by_id(location.id)
+    #     posts = Post.get_location_posts(location.id)
+    #
+    #     return render(request, 'home.html',
+    #                   {"posts": posts, "location_details": location_details, "location": location})

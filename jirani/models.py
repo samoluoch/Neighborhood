@@ -90,6 +90,11 @@ class Post(models.Model):
         return posts
 
     @classmethod
+    def get_location_posts(cls, location):
+        posts = Post.objects.filter(location__id=location)
+        return posts
+
+    @classmethod
     def search_by_category(cls, search_term):
         # cat = category.objects.get(name=search_term)
         posts = cls.objects.filter(category__name__icontains=search_term)

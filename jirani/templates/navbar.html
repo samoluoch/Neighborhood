@@ -68,7 +68,7 @@
                       </a>
                 <ul class="dropdown-menu" role="menu">
                   <li>
-                    <a href="{%url 'home'%}">Home</a>
+                    <a href="{%url 'home' request.user.profile.location.id %}">Home</a>
                   </li>
                     <li>
                     <a href="/user/samsoluoch">Profile Details</a>
