@@ -8,6 +8,12 @@ class Location(models.Model):
     This is the location class
     '''
     name = models.CharField(max_length =30)
+    police = models.TextField(null=True)
+    # police_contact = models.IntegerField(max_length=60)
+    hospital = models.TextField(null=True)
+    # hospital_contact = models.IntegerField(max_length=60)
+
+
 
     def __str__(self):
         return self.name
