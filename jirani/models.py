@@ -78,11 +78,7 @@ class Post(models.Model):
     def delete_image(self):
         self.delete()
 
-    # @classmethod
-    # def todays_image(cls):
-    #     today = dt.date.today()
-    #     image = cls.objects.filter(pub_date__date=today)
-    #     return image
+
 
     @classmethod
     def get_profile_posts(cls, profile):
@@ -105,16 +101,50 @@ class Post(models.Model):
         posts = cls.objects.filter(location__name__icontains=search_term)
         return posts
 
-    # @classmethod
-    # def days_image(cls, date):
-    #     image = cls.objects.filter(pub_date__date=date)
-    #     return image
 
     @classmethod
     def all_posts(cls):
         posts = cls.objects.all()
         return posts
 
+
+class Business(models.Model):
+    '''
+    This is image class model
+    '''
+    name = models.CharField(max_length=60)
+    description = models.TextField()
+    products = models.TextField()
+    location = models.ForeignKey(Location, null=True)
+    phone_number = models.IntegerField(max_length=60)
+
+
+    def save_business(self):
+        self.save()
+
+    def delete_business(self):
+        self.delete()
+
+
+    @classmethod
+    def get_location_business(cls, location):
+        business = Business.objects.filter(location__id=location)
+        return business
+
+    @classmethod
+    def search_by_category(cls, search_term):
+        business = cls.objects.filter(category__name__icontains=search_term)
+        return business
+
+    @classmethod
+    def search_by_location(cls, search_term):
+        business = cls.objects.filter(location__name__icontains=search_term)
+        return business
+
+    @classmethod
+    def all_business(cls):
+        business = cls.objects.all()
+        return business
 
 
 

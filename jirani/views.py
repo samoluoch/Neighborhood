@@ -15,9 +15,6 @@ from .models import Profile,Post,Location
 
 def home(request,location_id):
     location = Location.objects.get(id=location_id)
-    print(location)
-    print('resertttttsttststststststssttstst')
-
 
     try:
         location_details=Post.objects.filter(location=location)
