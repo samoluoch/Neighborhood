@@ -13,6 +13,11 @@ class Location(models.Model):
     hospital = models.TextField(null=True)
     # hospital_contact = models.IntegerField(max_length=60)
 
+    @classmethod
+    def get_location_contacts(cls, location):
+        contacts = Location.objects.filter(location__id=location)
+        return contacts
+
 
 
     def __str__(self):

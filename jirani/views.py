@@ -109,6 +109,16 @@ def business(request,location_id):
 
 
 
+def contact(request,location_id):
+    location = Location.objects.get(id=location_id)
+
+    # try:
+    #     location_details=Location.objects.filter(location=location)
+    # except:
+    #     location_details = Location.filter(location.id)
+    contacts = Location.get_location_contacts(location.id)
+
+    return render(request, 'contacts.html', {"contacts": contacts, "location":location})
 
 
 

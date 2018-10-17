@@ -18,5 +18,9 @@ urlpatterns=[
     url(r'^post/$', views.upload_post, name='upload_post'),
     url(r'^home/(\d+)', views.home, name='home'),
     url(r'^business/(\d+)', views.business, name='business'),
+    url(r'^contact/(\d+)', views.contact, name='contact'),
 
 ]
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
