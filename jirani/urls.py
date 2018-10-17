@@ -17,5 +17,7 @@ urlpatterns=[
     url(r'^user/(?P<username>\w+)', views.profile, name='profile'),
     url(r'^post/$', views.upload_post, name='upload_post'),
     url(r'^(\d+)', views.home, name='home'),
+    url(r'^business(\d+)', views.business, name='business'),
+    # url(r'^business/', views.business, name='business'),
 
 ]

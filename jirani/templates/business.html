@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+
+<style>
+.blue-button{
+    width: 100px;
+    -webkit-transition: background-color 1s , color 1s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 1s , color 1s;
+    min-height: 20px;
+    background-color: #002E5B;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0px 20px 15px 20px;
+    padding: 5px 0px;
+    display: inline-block;
+}
+.blue-button:hover{
+    background-color: #dadada;
+    color: #002E5B;
+}</style>
+<h2 id="home-header" style="text-align:center; color: black; background-color: #F7F7F7;">Neighborhood</h2>
+
+
+
+{% for biz in business %}
+<div class="container-fluid" style="background-color: #F7F7F7;">
+    <div class="row" height="1000px">
+        <br><br>
+        <div class="col-xs-9 col-sm- col-md-8 col-lg-8" style="text-align:center;"><h3>{{post.name}}</h3>
+
+            <!--<h5 style="color: black;" ><b><i>{{image.profile}}</i></b></h5>-->
+            <!--<button type="button" data-toggle="modal" data-target="#myModal{{post.id}}">-->
+
+            <!--<img class="well" src="{{post.image.url}}"  width='500' height='500' alt="" class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="backgrounds-color: white;">-->
+                <!--</button>-->
+
+
+            <h4 style="color: black;">Business Details</h4>
+
+            <h5><b style="color: green;">Name:</b> {{biz.name}}</h5>
+            <h5><b style="color: green;">Location:</b> {{biz.location}}</h5>
+            <h5><b style="color: green;">Category:</b> {{biz.phone_number}}</h5>
+
+
+            <!--<h5><b style="color: green;">Posted By:</b> {{post.profile}}</h5>-->
+            <!--<h5><b style="color: green;">Description:</b> {{post.description}}</h5>-->
+            <!--<h5><b style="color: green;">Submitted:</b> {{post.pub_date|timesince}} ago</h5>-->
+            <!--<h5><b style="color: green;">URL:</b> {{project.url}}</h5>-->
+
+
+
+
+ </div>
+<!--Rating-->
+
+
+
+
+
+        <!--End Rating-->
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

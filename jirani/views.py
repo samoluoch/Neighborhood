@@ -4,7 +4,7 @@ from django.http import HttpResponse,Http404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm,EditProfileForm,PostForm
-from .models import Profile,Post,Location
+from .models import Profile,Post,Location,Business
 
 # Create your views here.
 
@@ -89,6 +89,32 @@ def upload_post(request):
         form = PostForm()
 
     return render(request, 'profile/upload_post.html', {'form': form})
+
+
+
+
+
+
+def business(request,location_id):
+    location = Location.objects.get(id=location_id)
+
+    try:
+        location_details=Business.objects.filter(location=location)
+    except:
+        location_details = Location.filter(location.id)
+    business = Business.get_location_business(location.id)
+
+    return render(request, 'business.html', {"business": business, "location_details":location_details, "location":location})
+
+
+
+
+
+
+
+
+
+
 
 
 
