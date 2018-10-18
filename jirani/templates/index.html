@@ -6,16 +6,41 @@
 
 <div class="row">
 
-<div class="col-xs-3 col-sm- col-md-4 col-lg-4" style="text-align:center;">
+<div class="col-xs-6 col-sm- col-md-6 col-lg-6" style="text-align:center;">
+    <div class="well">
+    <br><br>
 
             <a href="{%url 'home' request.user.profile.neighborhood.id %}" class="btn btn-primary">Latest Neighborhood Updates</a>
 
-
+<br><br><br><br><br><br>
         <a href="/business/{{request.user.profile.neighborhood.id}}" class="btn btn-primary">Businesses Around Me</a>
 
 
         </div>
-    <br><br>
+    </div>
+
+    <div class="col-xs-6 col-sm- col-md-6 col-lg-6" style="text-align:center;">
+        <div class="well">
+
+          <h4>Guidelines</h4>
+        <p>Below are the guidelines for using the app</p>
+        <ul>
+            <li>
+                <p>Register and login</p>
+            </li>
+            <li>
+                <p>Click on the Drop-Down menu at the navbar, Go to your profile and choose your neighborhood</p>
+            </li>
+            <li>
+                <p>Click on Local Updates to see the updates within your neighborhood as well as Police and Hospital contacts</p>
+            </li>
+            <li>
+                <p>Click on Business Around Me to see the business within your neighborhood and their contacts</p>
+            </li>
+
+        </ul>
+        </div>
+        </div>
 </div>
 
 {% endblock %}
