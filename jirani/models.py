@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class Location(models.Model):
+class Neighborhood(models.Model):
     '''
     This is the location class
     '''
@@ -15,7 +15,7 @@ class Location(models.Model):
 
     @classmethod
     def get_location_contacts(cls, location):
-        contacts = Location.objects.get(location__id=location)
+        contacts = Neighborhood.objects.get(location__id=location)
         return contacts
 
 
@@ -25,9 +25,9 @@ class Location(models.Model):
 
 class Profile(models.Model):
     photo = models.ImageField(upload_to='image/', null=True)
-    bio = models.TextField(null=True)
+    email = models.CharField(max_length =30, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, default=1)
-    location = models.ForeignKey(Location, null=True)
+    neighborhood = models.ForeignKey(Neighborhood, null=True)
 
 
 
@@ -41,7 +41,7 @@ class Profile(models.Model):
         self.save()
 
     class Meta:
-        ordering = ['bio']
+        ordering = ['email']
 
     @classmethod
     def search_profile(cls, name):
@@ -79,7 +79,7 @@ class Post(models.Model):
     description = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category)
-    location = models.ForeignKey(Location, null=True)
+    location = models.ForeignKey(Neighborhood, null=True)
     profile = models.ForeignKey(User, null=True)
 
 
@@ -126,8 +126,8 @@ class Business(models.Model):
     name = models.CharField(max_length=60)
     description = models.TextField()
     products = models.TextField()
-    location = models.ForeignKey(Location, null=True)
-    phone_number = models.IntegerField(max_length=60)
+    location = models.ForeignKey(Neighborhood, null=True)
+    phone_number = models.IntegerField()
 
 
     def save_business(self):

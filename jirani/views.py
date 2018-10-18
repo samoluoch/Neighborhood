@@ -4,7 +4,7 @@ from django.http import HttpResponse,Http404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm,EditProfileForm,PostForm
-from .models import Profile,Post,Location,Business
+from .models import Profile,Post,Neighborhood,Business
 
 # Create your views here.
 
@@ -15,12 +15,12 @@ def index(request):
 
 
 def home(request,location_id):
-    location = Location.objects.get(id=location_id)
+    location = Neighborhood.objects.get(id=location_id)
 
     try:
         location_details=Post.objects.filter(location=location)
     except:
-        location_details = Location.filter(location.id)
+        location_details = Neighborhood.filter(location.id)
     posts = Post.get_location_posts(location.id)
 
     return render(request, 'home.html', {"posts": posts, "location_details":location_details, "location":location})
@@ -97,12 +97,12 @@ def upload_post(request):
 
 
 def business(request,location_id):
-    location = Location.objects.get(id=location_id)
+    location = Neighborhood.objects.get(id=location_id)
 
     try:
         location_details=Business.objects.filter(location=location)
     except:
-        location_details = Location.filter(location.id)
+        location_details = Neighborhood.filter(location.id)
     business = Business.get_location_business(location.id)
 
     return render(request, 'business.html', {"business": business, "location_details":location_details, "location":location})
@@ -110,7 +110,7 @@ def business(request,location_id):
 
 
 def contact(request,location_id):
-    location = Location.objects.get(id=location_id)
+    location = Neighborhood.objects.get(id=location_id)
 
     # try:
     #     location_details=Location.objects.filter(location=location)
