@@ -25,7 +25,7 @@ class Location(models.Model):
 
 class Profile(models.Model):
     photo = models.ImageField(upload_to='image/', null=True)
-    bio = models.TextField()
+    bio = models.TextField(null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, default=1)
     location = models.ForeignKey(Location, null=True)
 
