@@ -4,7 +4,6 @@
 {{ form.media }}
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     {% if profile_details %}
@@ -47,50 +46,34 @@
                             <span class="font-weight-bold"><h3 style="color: green;">Projects Posted:</h3> You have posted <h4 style="color:green">{{posts|length}} </h4></span> Projects
                         </li>
                     </ul>
-                    <h4><h3 style="color: green;">Profile Bio</h3></h4>
-                    <h4 class="font3">{{profile_details.bio|safe}}</h4>
+                    <!--<h4><h3 style="color: green;">Profile Bio</h3></h4>-->
+                    <!--<h4 class="font3">{{profile_details.bio|safe}}</h4>-->
                     {% if profile.username == user.username %}
-                    <!--<p><a href="{% url 'upload_post' %}" class="btn btn-primary">Add Post</a></p>-->
                     {% endif %}
                 </div>
             </div>
-        </div>
     </div>
 
 
     <div class="row">
-        <h3 style="color: black;">My Projects List</h3>
+        <h3 style="color: black;">My Updates</h3>
         {% for post in posts %}
-        <!--<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">-->
-            <!--<br><br>-->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <br><br><br>
 
-            <!--<h3 style="color: green;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">{{project.title}}</h3>-->
-<!--<button type="button" data-toggle="modal" data-target="#myModal{{project.id}}">-->
 
-            <!--<img class="well" src="{{post.image.url}}"  width='500' height='500' alt="" class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="backgrounds-color: white;">-->
-                <!--</button>-->
+            <h5><b><h4 style="color: green;">Title</h4></b> {{post.name}}</h5>
 
-                        <!--<h4 style="color: black;">Post Summary</h4>-->
+            <h5>{{post.pub_date|timesince}} ago</h5>
 
-            <!--<h5><b>Name:</b> {{post.name}}</h5>-->
-            <!--<h5>{{post.pub_date|timesince}} ago</h5>-->
-            <!--<h5><b>Description:</b> {{post.description}}</h5>-->
-            <!--<h5><b>Location:</b> {{post.location}}</h5>-->
-            <!--<h5><b>Category:</b> {{post.category}}</h5>-->
+            <h5><b><h4 style="color: green;">Details</h4></b> {{post.description}}</h5>
+
+            <h5><b><h4 style="color: green;">Neighborhood</h4></b> {{post.location}}</h5>
+            <h5><b><h4 style="color: green;">Category</h4></b> {{post.category}}</h5>
+        </div>
 
 
 
-            <!--<h4 style="color: black;">Project Ratings</h4>-->
-
-            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>-->
-            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>-->
-
-            <!--<h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>-->
-            <!--<hr>-->
-                        <!--<a href="{{project.url}}" class="blue-button">Visit site</a>-->
-
-
-        <!--</div>-->
         {% empty %}
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <h5>You have submitted 0 projects so far. Please submit projects</h5>

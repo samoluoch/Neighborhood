@@ -94,9 +94,8 @@ class Category(models.Model):
 
 class Post(models.Model):
     '''
-    This is image class model
+    This is post class model
     '''
-    image = models.ImageField(upload_to='image/', null=True)
     name = models.CharField(max_length =60)
     description = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
