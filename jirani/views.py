@@ -96,29 +96,30 @@ def upload_post(request):
 
 
 
-def business(request,location_id):
+def business(request,neighborhood_id):
+    neighborhood = Neighborhood.objects.get(id=neighborhood_id)
+
+    try:
+        neighborhood_details=Business.objects.filter(neighborhood=neighborhood)
+    except:
+        neighborhood_details = Neighborhood.filter(location.id)
+    business = Business.get_neighborhood_business(neighborhood.id)
+
+    return render(request, 'business.html', {"business": business, "location_details":neighborhood_details, "neighborhood":neighborhood})
+
+
+0
+
+def occupants(request,location_id):
     location = Neighborhood.objects.get(id=location_id)
 
     try:
-        location_details=Business.objects.filter(location=location)
+        location_details=Neighborhood.objects.filter(location=location)
     except:
         location_details = Neighborhood.filter(location.id)
-    business = Business.get_location_business(location.id)
+    occupants = Profile.objects.all()
 
-    return render(request, 'business.html', {"business": business, "location_details":location_details, "location":location})
-
-
-
-def contact(request,location_id):
-    location = Neighborhood.objects.get(id=location_id)
-
-    # try:
-    #     location_details=Location.objects.filter(location=location)
-    # except:
-    #     location_details = Location.filter(location.id)
-    # contacts = Location.get_location_contacts(location.id)
-
-    return render(request, 'home.html', {"contacts": contacts, "location":location})
+    return render(request, 'home.html', {"occupants": occupants, "location_details":location_details, "location":location})
 
 
 
@@ -154,13 +155,3 @@ def search_profile(request):
         message = 'Type profile'
         return render(request, 'search.html', {'message':message})
 
-    # def home(request, location):
-    #     location = Location.objects.get(name=location)
-    #     try:
-    #         location_details = Post.objects.filter(location=location)
-    #     except:
-    #         location_details = Location.filter_by_id(location.id)
-    #     posts = Post.get_location_posts(location.id)
-    #
-    #     return render(request, 'home.html',
-    #                   {"posts": posts, "location_details": location_details, "location": location})

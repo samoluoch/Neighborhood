@@ -3,25 +3,47 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class Neighborhood(models.Model):
+class Location(models.Model):
     '''
     This is the location class
+        '''
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class Neighborhood(models.Model):
+    '''
+    This is the neighborhood class
     '''
     name = models.CharField(max_length =30)
     police = models.TextField(null=True)
-    # police_contact = models.IntegerField(max_length=60)
     hospital = models.TextField(null=True)
-    # hospital_contact = models.IntegerField(max_length=60)
+    location = models.ForeignKey(Location, null=True)
+    occupants = models.IntegerField(null=True)
+
+
+
+
 
     @classmethod
     def get_location_contacts(cls, location):
         contacts = Neighborhood.objects.get(location__id=location)
         return contacts
 
+    @classmethod
+    def get_location_posts(cls, location):
+        posts = Post.objects.filter(location__id=location)
+        return posts
+
 
 
     def __str__(self):
         return self.name
+
+
+
+
 
 class Profile(models.Model):
     photo = models.ImageField(upload_to='image/', null=True)
@@ -126,8 +148,11 @@ class Business(models.Model):
     name = models.CharField(max_length=60)
     description = models.TextField()
     products = models.TextField()
-    location = models.ForeignKey(Neighborhood, null=True)
+    neighborhood = models.ForeignKey(Neighborhood, null=True)
     phone_number = models.IntegerField()
+    email = models.EmailField(null=True)
+
+
 
 
     def save_business(self):
@@ -138,8 +163,8 @@ class Business(models.Model):
 
 
     @classmethod
-    def get_location_business(cls, location):
-        business = Business.objects.filter(location__id=location)
+    def get_neighborhood_business(cls, neighborhood):
+        business = Business.objects.filter(neighborhood__id=neighborhood)
         return business
 
     @classmethod
