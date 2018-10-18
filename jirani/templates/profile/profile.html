@@ -59,9 +59,9 @@
         <h3 style="color: black;">My Updates</h3>
         {% for post in posts %}
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <br><br><br>
 
 
+    <div class="well" width='50' height='50'>
             <h5><b><h4 style="color: green;">Title</h4></b> {{post.name}}</h5>
 
             <h5>{{post.pub_date|timesince}} ago</h5>
@@ -71,6 +71,7 @@
             <h5><b><h4 style="color: green;">Neighborhood</h4></b> {{post.location}}</h5>
             <h5><b><h4 style="color: green;">Category</h4></b> {{post.category}}</h5>
         </div>
+            </div>
 
 
 
