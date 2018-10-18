@@ -17,20 +17,12 @@
 
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 
-            <h1>{{biz.name}}</h1>
-            <!--<a href="{{project.url}}" class="text-center"><h5 id="username"><b><i>{{project.url}}</i></b></h5></a>-->
-
-            <h5>{{ biz.email }} <h5 style="color: green;">Design</h5>  average = {{ project.average_design | floatformat }} </h5>
-            <!--<h6 style="color: green;">Comments:</h6> {% for review in project.designrating_set.all %}-->
-                <!--<ul>{{review.comment}}</ul>-->
-                <!--{% endfor %}-->
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Usability</h5> average = {{ project.average_usability | floatformat }} </h5>
-
-            <h5>{{ project.rating.count }} <h5 style="color: green;">Content</h5>  average = {{ project.average_content | floatformat }}</h5>
-
-                     <br><br>
-            <a href="{{project.url}}" class="blue-button">Visit site</a>
-
+            <h3><b style="color: green;">Business Name:</b> <h5>{{biz.name}}</h5></h3>
+            <h3><b style="color: green;">Neighborhood:</b> <h5>{{biz.neighborhood}}</h5></h3>
+            <h3><b style="color: green;">Phone Number:</b> <h5>{{biz.phone_number}}</h5></h3>
+            <h3><b style="color: green;">Email:</b> <h5>{{biz.email}}</h5></h3>
+            <h3><b style="color: green;">Description:</b> <h5>{{biz.description}}</h5></h3>
+            <h3><b style="color: green;">Products:</b> <h5>{{biz.products}}</h5></h3>
 
 
 
