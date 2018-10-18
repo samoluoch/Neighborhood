@@ -54,7 +54,7 @@ class Profile(models.Model):
 
 
     def __str__(self):
-        return self.bio
+        return self.user
 
     def save_profile(self):
         self.save()
@@ -150,6 +150,7 @@ class Business(models.Model):
     neighborhood = models.ForeignKey(Neighborhood, null=True)
     phone_number = models.IntegerField()
     email = models.EmailField(null=True)
+
 
 
 
