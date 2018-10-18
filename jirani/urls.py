@@ -11,7 +11,7 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     url(r'^$', views.index, name='index'),
-    url(r'^search/$', views.search_profile, name='search_project'),
+    url(r'^search/$', views.search_business, name='search_business'),
     url(r'^signup/', views.register, name='signup'),
     url(r'^edit/', views.edit_profile, name='edit_profile'),
     url(r'^user/(?P<username>\w+)', views.profile, name='profile'),

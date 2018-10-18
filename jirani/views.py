@@ -123,35 +123,24 @@ def occupants(request,location_id):
 
 
 
+def search_business(request):
+    if 'name' in request.GET and request.GET['name']:
+        search_term = request.GET.get('name')
+        business = Business.search_business(search_term)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def search_profile(request):
-    if 'profile' in request.GET and request.GET['profile']:
-        search_term = request.GET.get('profile')
-        profiles = Profile.search_profile(search_term)
         message = f'{search_term}'
 
-        return render(request, 'search.html',{'message':message, 'profiles':profiles})
+        return render(request, 'search.html',{'message':message, 'business':business})
     else:
-        message = 'Type profile'
+        message = 'Type business name'
         return render(request, 'search.html', {'message':message})
+
+
+
+
+
+
+
+
+
 

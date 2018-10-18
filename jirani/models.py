@@ -168,8 +168,8 @@ class Business(models.Model):
         return business
 
     @classmethod
-    def search_by_location(cls, search_term):
-        business = cls.objects.filter(location__name__icontains=search_term)
+    def search_business(cls, search_term):
+        business = Business.objects.filter(name__icontains=search_term)
         return business
 
     @classmethod
