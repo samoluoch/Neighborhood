@@ -15,7 +15,7 @@ class Location(models.Model):
 
     @classmethod
     def get_location_contacts(cls, location):
-        contacts = Location.objects.filter(location__id=location)
+        contacts = Location.objects.get(location__id=location)
         return contacts
 
 

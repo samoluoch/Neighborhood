@@ -22,17 +22,34 @@
     color: #002E5B;
 }</style>
 <h2 id="home-header" style="text-align:center; color: black; background-color: #F7F7F7;">Neighborhood</h2>
-
 <div class="row">
-
-<div class="col-xs-3 col-sm- col-md-4 col-lg-4" style="text-align:center;">
-
-        <a href="/business/{{request.user.profile.location.id}}" class="btn btn-primary">Businesses Around Me</a>
+<div>
+    <h4 id="home-header" style="text-align:center; color: black; background-color: #F7F7F7;">Local Hotlines</h4>
+<div class="col-xs-6 col-sm- col-md-6 col-lg-6">
+                    <a href="/business/{{request.user.profile.location.id}}" class="btn btn-primary">Businesses Around Me</a>
 
 
         </div>
-    <br><br>
+
+    <div class="col-xs-6 col-sm- col-md-6 col-lg-6">
+            <h5><b style="color: green;">Police Contacts:<br><br></b> {{location.police}}</h5>
+            <h5><b style="color: green;">Hospital Contacts:<br><br></b> {{location.hospital}}</h5>
+
+
+        </div>
 </div>
+    </div>
+
+<!--<div class="row">-->
+
+<!--<div class="col-xs-3 col-sm- col-md-4 col-lg-4" style="text-align:center;">-->
+
+        <!--<a href="/business/{{request.user.profile.location.id}}" class="btn btn-primary">Businesses Around Me</a>-->
+
+
+        <!--</div>-->
+    <!--<br><br>-->
+<!--</div>-->
 
 {% for post in posts %}
 <div class="container-fluid" style="background-color: #F7F7F7;">
@@ -66,6 +83,8 @@
  </div>
 
 
+
+
 <!--Rating-->
 
 
@@ -75,6 +94,8 @@
         <!--End Rating-->
     </div>
 </div>
+
+
 {% endfor %}
 
 {% endblock %}
