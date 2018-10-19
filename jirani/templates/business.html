@@ -20,16 +20,38 @@
 .blue-button:hover{
     background-color: #dadada;
     color: #002E5B;
-}</style>
-<h2 id="home-header" style="text-align:center; color: black; background-color: #F7F7F7;">Neighborhood</h2>
+}
+
+ body{
+    background:url("../../../static/img/bg7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 580px;
+
+    }
+    h2{
+    color: white;
+    text-align: center;
+    }
+ #business-list{
+    opacity:0.5;
+    background-color: #F7F7F7;
+    width: 200px;
+    margin-bottom: 10px;
+ }
+
+</style>
+<body>
+<!--<h2 id="home-header" style="text-align:center; color: black; background-color: #F7F7F7;">Neighborhood</h2>-->
 
 
 
 {% for biz in business %}
-<div class="container-fluid" style="background-color: #F7F7F7;">
-    <div class="row" height="1000px">
+<div class="container-fluid">
+    <div class="row" id="business-list">
         <br><br>
-        <div class="col-xs-9 col-sm- col-md-8 col-lg-8" style="text-align:center;"><h3>{{post.name}}</h3>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align:center; display: inline;"><h3>{{post.name}}</h3>
 
 
 
@@ -56,5 +78,5 @@
     </div>
 </div>
 {% endfor %}
-
+</body>
 {% endblock %}
