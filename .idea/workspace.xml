@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f8be9a8-0935-465e-964d-c7c92eb13aef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/bg7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/2017_Land_Rover_Range_Rover_Velar_First_Edition_D3_3.0_Front.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_4353.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_4353_BdfBCu4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_4353_tKwrfTY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_5679-e1391415802149.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_5679-e1391415802149_R3t6XLo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_5679-e1391415802149_dQBY4MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_5679-e1391415802149_iXy0erB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_5679-e1391415802149_n5hZKxp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/IMG_5679-e1391415802149_oSPbCK5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/avenue-2215317__340.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bigstock-Moose-Horn-Trail-Path-72034855.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bigstock-Moose-Horn-Trail-Path-72034855_Yt2KB8w.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images_9boGjow.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images_FMZpWg1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images_OyUyvRc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/land-rover-freelander-2-special-edition-launched-at-rs-44-41-lakh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/maxresdefault.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/nature_waterfall_summer_lake_trees_90400_3840x2160.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jirani/templates/business.html" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/templates/business.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jirani/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/jirani/templates/search.html" afterDir="false" />
-    </list>
+    <list default="true" id="0f8be9a8-0935-465e-964d-c7c92eb13aef" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +26,7 @@
           <entry key="jpg" value="7" />
           <entry key="md" value="2" />
           <entry key="py" value="42" />
-          <entry key="txt" value="7" />
+          <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -63,7 +35,7 @@
           <entry key="HTML" value="60" />
           <entry key="Image" value="7" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="Python" value="42" />
         </counts>
       </usages-collector>
@@ -136,18 +108,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jirani/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1640">
-              <caret line="149" column="51" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jirani/templates/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -195,14 +155,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neighborhood/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="147" column="14" lean-forward="true" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
+            <state relative-caret-position="241">
+              <caret line="138" column="15" lean-forward="true" selection-start-line="138" selection-start-column="15" selection-end-line="138" selection-end-column="15" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -463,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -650,11 +612,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neighborhood/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="147" column="14" lean-forward="true" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
+        <state relative-caret-position="241">
+          <caret line="138" column="15" lean-forward="true" selection-start-line="138" selection-start-column="15" selection-end-line="138" selection-end-column="15" />
           <folding>
             <element signature="e#314#323#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
