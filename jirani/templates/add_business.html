@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="container-fluid" style=" margin-top: -21px;">
+    <div class="row">
+
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="pform">
+            <div class="jumbotron" >
+                            <h4>Submit Post Update</h4>
+
+            <form action="{% url 'add_business' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" class="btn btn-success btn-lg" value="POST">
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+{{ form.media }}
+
+<style>
+    body{
+    background:url("../../../static/img/bg0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1250px;
+
+    }
+    h2{
+    color: white;
+    text-align: center;
+    }
+    #pform{
+    width: 400px;
+    height: 100px;
+    opacity: 0.7;
+    }
+</style>
+{% endblock %}
+

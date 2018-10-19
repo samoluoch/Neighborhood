@@ -3,7 +3,7 @@ from django.http import HttpResponse,Http404
 # from .models import Image,Profile,Comments
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm,EditProfileForm,PostForm
+from .forms import RegistrationForm,EditProfileForm,PostForm,BusinessForm
 from .models import Profile,Post,Neighborhood,Business
 
 # Create your views here.
@@ -93,7 +93,18 @@ def upload_post(request):
 
 
 
+def add_business(request):
+    if request.method == 'POST':
+        form = BusinessForm(request.POST, request.FILES)
+        if form.is_valid():
+            upload = form.save(commit=False)
+            upload.profile = request.user
+            upload.save()
+            return redirect('profile',username=request.user)
+    else:
+        form = BusinessForm()
 
+    return render(request, 'add_business.html', {'form': form})
 
 
 def business(request,neighborhood_id):

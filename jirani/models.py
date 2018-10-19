@@ -150,6 +150,8 @@ class Business(models.Model):
     neighborhood = models.ForeignKey(Neighborhood, null=True)
     phone_number = models.IntegerField()
     email = models.EmailField(null=True)
+    pub_date = models.DateTimeField(auto_now_add=True, null=True)
+
 
 
 

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Profile,Post
+from .models import Profile,Post,Business
 
 
 class RegistrationForm(UserCreationForm):
@@ -23,6 +23,12 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         exclude = ['pub_date', 'profile']
+
+
+class BusinessForm(forms.ModelForm):
+    class Meta:
+        model = Business
+        exclude = ['pub_date']
 
 
 
