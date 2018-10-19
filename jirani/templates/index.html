@@ -1,13 +1,14 @@
 {%extends 'base.html'%}
 {% load bootstrap3 %}
+{% load static %}
 {% block content %}
-
+<body>
 <h2>Welcome to Neighborhood</h2>
 
-<div class="row">
+<div class="row" style='text-align:center;'>
 
-<div class="col-xs-6 col-sm- col-md-6 col-lg-6" style="text-align:center;">
-    <div class="well">
+<div class="col-xs-6 col-sm- col-md-6 col-lg-6">
+    <div class="wells">
     <br><br>
 
             <a href="{%url 'home' request.user.profile.neighborhood.id %}" class="btn btn-primary">Latest Neighborhood Updates</a>
@@ -19,23 +20,21 @@
         </div>
     </div>
 
-    <div class="col-xs-6 col-sm- col-md-6 col-lg-6" style="text-align:center;">
-        <div class="well">
+    <div class="col-xs-6 col-sm- col-md-6 col-lg-6" style="text-align:left; color:white;">
+        <div class="wells">
 
-          <h4>Guidelines</h4>
-        <p>Below are the guidelines for using the app</p>
         <ul>
             <li>
-                <p>Register and login</p>
+                <h5>Register and login</h5>
             </li>
             <li>
-                <p>Click on the Drop-Down menu at the navbar, Go to your profile and choose your neighborhood</p>
+                <h5>Click on the Drop-Down menu at the navbar, Go to your profile and choose your neighborhood</h5>
             </li>
             <li>
-                <p>Click on Local Updates to see the updates within your neighborhood as well as Police and Hospital contacts</p>
+                <h5>Click on Local Updates to see the updates within your neighborhood as well as Police and Hospital contacts</h5>
             </li>
             <li>
-                <p>Click on Business Around Me to see the business within your neighborhood and their contacts</p>
+                <h5>Click on Business Around Me to see the business within your neighborhood and their contacts</h5>
             </li>
 
         </ul>
@@ -43,4 +42,20 @@
         </div>
 </div>
 
+
+</body>
+<style>
+    body{
+    background:url("../../../static/img/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 620px;
+
+    }
+    h2{
+    color: white;
+    text-align: center;
+    }
+</style>
 {% endblock %}
