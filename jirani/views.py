@@ -7,7 +7,7 @@ from .forms import RegistrationForm,EditProfileForm,PostForm,BusinessForm
 from .models import Profile,Post,Neighborhood,Business
 
 # Create your views here.
-
+@login_required(login_url='/login')
 def index(request):
     # posts = Post.objects.all()
 
