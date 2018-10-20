@@ -1,4 +1,4 @@
-# Instagram Clone
+# Neighborhood
 This is an application that allows users to sign up, choose neighborhoods, post updates on their neighborhoods, view updates within their neighborhoods, search for businesses within their neighborhoods, see Police and Hospital contacts, and update their profile details such as change of location when they move out.
 
 ### Developed By

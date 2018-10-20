@@ -19,6 +19,7 @@ urlpatterns=[
     url(r'^home/(\d+)', views.home, name='home'),
     url(r'^business/(\d+)', views.business, name='business'),
     url(r'^add_business/$', views.add_business, name='add_business'),
+    url(r'^comment/(?P<post_id>\d+)', views.add_comment, name='comment'),
 
 ]
 

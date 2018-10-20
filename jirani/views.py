@@ -1,9 +1,8 @@
 from django.shortcuts import render,redirect,get_list_or_404,get_object_or_404
 from django.http import HttpResponse,Http404
-# from .models import Image,Profile,Comments
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm,EditProfileForm,PostForm,BusinessForm
+from .forms import RegistrationForm,EditProfileForm,PostForm,BusinessForm,CommentsForm
 from .models import Profile,Post,Neighborhood,Business
 
 # Create your views here.
@@ -147,7 +146,17 @@ def search_business(request):
         return render(request, 'search.html', {'message':message})
 
 
-
+@login_required(login_url='/login')
+def add_comment(request,post_id):
+    posts = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        form = CommentsForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.profile = request.user.profile
+            comment.post = posts
+            comment.save()
+    return redirect('index')
 
 
 

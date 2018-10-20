@@ -102,6 +102,8 @@ class Post(models.Model):
     category = models.ForeignKey(Category)
     location = models.ForeignKey(Neighborhood, null=True)
     profile = models.ForeignKey(User, null=True)
+    comment = models.TextField(null=True)
+
 
 
     def save_post(self):
@@ -182,7 +184,22 @@ class Business(models.Model):
 
 
 
+class Comments(models.Model):
+    comment = models.CharField(max_length =60)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
+    def save_comment(self):
+        self.save()
+
+    def delete_comment(self):
+        self.save()
+
+    @classmethod
+    def get_comments_by_posts(cls, id):
+        comments = Comments.objects.filter(post__pk=id)
+        return comments
 
 
 
