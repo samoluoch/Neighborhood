@@ -35,6 +35,23 @@ class Neighborhood(models.Model):
     location = models.ForeignKey(Location, null=True)
     occupants = models.IntegerField(null=True)
 
+    def save_neighborhood(self):
+        self.save()
+
+    @classmethod
+    def delete_neighbourhood_by_id(cls, id):
+        neighbourhoods = cls.objects.filter(pk=id)
+        neighbourhoods.delete()
+
+    @classmethod
+    def find_neighbourhood_by_id(cls, id):
+        neighbourhoods = cls.objects.get(pk=id)
+        return neighbourhoods
+
+    @classmethod
+    def update_neighbourhood(cls, id):
+        neighbourhood = cls.objects.filter(id=id).update(id=id)
+        return neighbourhood
 
 
 
@@ -179,6 +196,10 @@ class Business(models.Model):
     def delete_business(self):
         self.delete()
 
+    @classmethod
+    def update_business(cls, id):
+        business = cls.objects.filter(id=id).update(id=id)
+        return business
 
     @classmethod
     def get_neighborhood_business(cls, neighborhood):
