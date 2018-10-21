@@ -37,8 +37,9 @@
  #business-list{
     opacity:0.5;
     background-color: #F7F7F7;
-    width: 200px;
-    margin-bottom: 10px;
+    width: 450px;
+    <!--margin-left: 10px;-->
+    padding-left :10px;
  }
 
 </style>
@@ -47,11 +48,12 @@
 
 
 
-{% for biz in business %}
 <div class="container-fluid">
-    <div class="row" id="business-list">
-        <br><br>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align:center; display: inline;"><h3>{{post.name}}</h3>
+    <div class="row" >
+{% for biz in business %}
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 " id="business-list" style="text-align:center; margin-left:5px; display: inline;">
+            <h3>{{post.name}}</h3>
 
 
 
@@ -73,10 +75,10 @@
 
 
 
- </div>
+ </div>{% endfor %}
+
 
     </div>
 </div>
-{% endfor %}
 </body>
 {% endblock %}

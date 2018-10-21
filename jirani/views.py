@@ -54,7 +54,7 @@ def register(request):
                 # to_email = form.cleaned_data.get('email')
                 # activation_email(user, current_site, to_email)
                 # return HttpResponse('Please confirm your email')
-            return redirect('home.html')
+            return redirect('auth_login')
 
         else:
             form = RegistrationForm()
@@ -97,6 +97,7 @@ def upload_post(request):
         if form.is_valid():
             upload = form.save(commit=False)
             upload.profile = request.user
+            upload.location = request.user.profile.neighborhood
             upload.save()
             return redirect('profile',username=request.user)
     else:
@@ -112,6 +113,7 @@ def add_business(request):
         if form.is_valid():
             upload = form.save(commit=False)
             upload.profile = request.user
+            upload.neighborhood = request.user.profile.neighborhood
             upload.save()
             return redirect('profile',username=request.user)
     else:
@@ -163,6 +165,7 @@ def search_business(request):
 @login_required(login_url='/login')
 def add_comment(request,post_id):
     posts = get_object_or_404(Post, pk=post_id)
+
     if request.method == 'POST':
         form = CommentsForm(request.POST)
         if form.is_valid():
@@ -170,7 +173,7 @@ def add_comment(request,post_id):
             comment.profile = request.user.profile
             comment.post = posts
             comment.save()
-    return redirect('index')
+    return redirect('home',request.user.profile.neighborhood.id)
 
 
 

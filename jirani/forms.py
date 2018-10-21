@@ -22,13 +22,13 @@ class EditProfileForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        exclude = ['pub_date', 'profile']
+        exclude = ['pub_date', 'profile', 'location','comment']
 
 
 class BusinessForm(forms.ModelForm):
     class Meta:
         model = Business
-        exclude = ['pub_date']
+        exclude = ['pub_date','neighborhood']
 
 
 class CommentsForm(forms.ModelForm):
