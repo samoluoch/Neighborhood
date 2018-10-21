@@ -38,6 +38,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = '/login'
+SIGNUP_REDIRECT_URL = '/login'
+
 
 # Application definition
 

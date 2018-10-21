@@ -1,5 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+
+
+@receiver(post_save,sender=User)
+def create_profile(sender, instance,created,**kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save,sender=User)
+def save_profile(sender, instance,**kwargs):
+    instance.profile.save()
+
 
 
 # Create your models here.
@@ -17,8 +30,8 @@ class Neighborhood(models.Model):
     This is the neighborhood class
     '''
     name = models.CharField(max_length =30)
-    police = models.TextField(null=True)
-    hospital = models.TextField(null=True)
+    police = models.TextField(default="999")
+    hospital = models.TextField(default="999")
     location = models.ForeignKey(Location, null=True)
     occupants = models.IntegerField(null=True)
 
@@ -49,12 +62,12 @@ class Profile(models.Model):
     photo = models.ImageField(upload_to='image/', null=True)
     email = models.CharField(max_length =30, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, default=1)
-    neighborhood = models.ForeignKey(Neighborhood, null=True)
+    neighborhood = models.ForeignKey(Neighborhood, default=6)
 
 
 
     def __str__(self):
-        return self.user
+        return self.user.username
 
     def save_profile(self):
         self.save()

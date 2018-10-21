@@ -4,8 +4,22 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegistrationForm,EditProfileForm,PostForm,BusinessForm,CommentsForm
 from .models import Profile,Post,Neighborhood,Business
+# from django.dispatch import receiver
+# from django.db.models.signals import post_save
+#
+#
+#
+# # Create your views here.
+# @receiver(post_save,sender=User)
+# def create_profile(sender, instance,created,**kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)
+#
+# @receiver(post_save,sender=User)
+# def save_profile(sender, instance,**kwargs):
+#     instance.profile.save()
 
-# Create your views here.
+
 @login_required(login_url='/login')
 def index(request):
     # posts = Post.objects.all()
